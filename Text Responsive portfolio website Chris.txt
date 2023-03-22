@@ -1,0 +1,285 @@
+========== HEADER ==========
+.nav__logo
+Mica
+
+.nav__link
+Home - Skills - Qualification - Services - Projects - Contact
+
+
+========== HOME ==========
+.home__title
+Hi, I’m Mica <br>
+Frontend Developer <br>
+Based In Argentina <br>
+
+.home__social
+https://www.linkedin.com/in/micaela-kloster-quintana/
+https://github.com/MicaelaKloster
+https://www.instagram.com/micaela.klosterquintana/
+
+.home__info-title
+BIOGRAPHY
+CONTACT
+SERVICES
+YEARS OF EXPERIENCE
+COMPLETED PROJECTS
+COMPANIES WORKED
+
+.home__info-description .home__info-number
+Hi, I'm Mica, Frontend Developer.
+Passionate about designing beautiful web
+interfaces. Based in Argentina.
+
+Santa Fe, Argentina <br>
+micaela.klosterquintana@gmail.com <br>
++51 9876543210 <br>
+
+Website Design <br>
+UI/UX Design <br>
+
+08+
+
+24+
+
+07+
+
+
+========== SKILLS ==========
+.section__title
+Skills
+
+.section__subtitle
+My favorite skills
+
+.skills__title
+Frontend Developer 
+Web Designer
+
+.skills__name .skills__subtitle
+HTML
+Intermediate
+
+CSS
+Advanced
+
+JavaScript
+Intermediate
+
+React
+Basic
+
+Git
+Intermediate
+
+Python
+Intermediate
+
+
+Angular
+Basic
+
+MySQL
+Intermediate
+
+C++ (Backend)
+Intermediate
+
+Ruby (Backend)
+Basic
+
+Java (Backend)
+Basic
+
+PHP (Backend)
+Basic
+
+.NET (Backend)
+Intermediate
+
+Kotlin (Backend)
+Basic
+
+Figma
+Intermediate
+
+inVision
+Intermediate
+
+
+========== QUALIFICATION ==========
+.section__title
+Qualification
+
+.section__subtitle
+Experience & education
+
+.qualification__title
+Education
+Work
+
+.qualification__name .qualification__country .qualification__year
+English
+Institute - Argentina
+2006 - 2016
+
+Web Development Technician
+UNER University - Argentina
+2022- Present
+
+Computer Engineer
+UNL University  - Argentina
+2020 - Present
+
+Diploma in Website and Mobile Application Development
+Carlos Slim Foundation - México
+2021 - 2022
+
+Fontend Developer
+Carlos Slim Foundation - México
+2021 - 2022
+
+Backend Developer
+Carlos Slim Foundation - México
+2021 - 2022
+
+Video Games Developer
+Carlos Slim Foundation - México
+2021 - 2022
+
+Database Administrator
+Carlos Slim Foundation - México
+2021 - 2022
+
+UI/UX Design
+Carlos Slim Foundation - México
+2022 - Present
+
+Graphic Designer
+Figma
+2020 - Present
+
+
+========== SERVICES ==========
+.section__title
+Services
+
+.section__subtitle
+What I offer
+
+.services__title .services__description
+UI/UX <br>
+Designer
+
+Service that provides the best quality and at 
+the request of the client, with professional 
+work and customer support.
+
+Website <br>
+Design
+
+
+
+========== PROJECTS ==========
+.section__title
+Projects
+
+.section__subtitle
+Most recent work
+
+
+.projects__subtitle .projects__title .projects__button
+Web
+Modern Website
+View demo
+
+Web
+ECommerce Store
+
+Design
+Application Design
+
+
+
+========== CONTACT ==========
+.section__title
+Contact Me
+
+.section__subtitle
+Get in touch
+
+.contact__title
+Talk to me
+Write me your project
+
+.contact__data-title .contact__data-info .contact__button
+Email
+micaela.klosterquintana@gmail.com
+
+Whatsapp
++54 3425254198
+Write me
+
+<!-- Insert a real number plus country code -->
+https://api.whatsapp.com/send?phone=519876543210&text=Hello, more information!
+
+Messenger
+@chris.fb123
+Write me
+
+<!-- Insert your brand name or profile -->
+https://m.me/bedimcode
+
+.contact__form-tag | placeholder
+Names
+Write your names
+
+Mail
+Write your email
+
+Project
+Write your project
+
+.contact__button
+Submit
+
+========== EMAIL JS CONTACT ==========
+
+// Check if the field has a value
+	// Add and remove color
+
+	// Show message	
+		Write all the input fields 
+
+// serviceID - templateID - #form - publicKey
+	// Show message and add color
+		Message sent 
+	
+	// Remove message after five seconds
+
+	// Send Error
+		OOPS! SOMETHING HAS FAILED...
+
+// To clear the input field
+========== FOOTER ==========
+.footer__title
+Micaela Kloster
+
+<p>
+Frontend Developer
+
+.footer__link
+Home
+Skills
+Projects
+
+.footer__social-link
+https://www.linkedin.com/in/micaela-kloster-quintana/
+https://github.com/MicaelaKloster
+https://www.instagram.com/micaela.klosterquintana/
+
+.footer__copy
+&#169; Copyright Micaela Kloster Quintana. All rights reserved.
+
+
+
+
