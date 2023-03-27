@@ -651,7 +651,7 @@
                 <div class="contact__container container grid section__border">
                     <div class="contact__content">
                         <h3 class="contact__title">
-                            <i class="ri-chat-3-line">Talk to me</i>
+                            <i class="ri-chat-3-line"> Talk to me</i>
                         </h3>
 
                         <div class="contact__info">
@@ -662,9 +662,10 @@
 
                             <div class="contact__data">
                                 <span class="contact__data-title">WhatsApp</span>
-                                <span class="contact__data-info">+54 3425254198</span>
+                                <!-- <span class="contact__data-info"></span> -->
+                                
                                 <!-- Insert a real number plus country code -->
-                                <a href="https://api.whatsapp.com/send?phone=519876543210&text=Hello, more information!" target="_blank" class="contact__button">
+                                <a href="https://api.whatsapp.com/send?phone=5493425254198&text=Hello, more information!" target="_blank" class="contact__button">
                                     Write me <i class="ri-arrow-right-line"></i>
                                 </a>
                             </div>
@@ -693,6 +694,8 @@
                                 <textarea name="user_project" placeholder="Write your project" id="contact-project"  class="contact__form-input"></textarea>    
                             </div>
 
+                            <p class="contact__message" id="contact-message"></p>
+
                             <button type="submit" class="contact__button">
                                 Submit <i class="ri-arrow-right-up-line"></i>
                             </button>
@@ -720,7 +723,7 @@
         <script src="./assets/js/swiper-bundle.min.js"></script>
         
         <!--=============== EMAIL JS ===============-->
-        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
         <!--=============== MAIN JS ===============-->
         <script src="./assets/js/main.js"></script>

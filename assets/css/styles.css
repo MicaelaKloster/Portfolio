@@ -735,6 +735,7 @@ body.dark-theme {
   left: 1.25rem;
   z-index: 10;
   background-color: var(--body-font);
+  background: var(--body-color);
   color: var(--title-color);
   font-size: var(--smaller-font-size);
   font-weight: var(--font-medium);
@@ -765,9 +766,22 @@ body.dark-theme {
   font-weight: initial;
 }
 
-
+.contact__message{
+  font-size: var(--small-font-size);
+  position: absolute;
+  bottom: 2.8rem;
+  left: 1.5rem;
+}
 
 /* Status color */
+.color-red{
+  color: hsl(4, 71%, 50%);
+}
+
+.color-blue{
+  color: hsl(207, 56%, 45%);
+}
+
 
 
 /*=============== FOOTER ===============*/
