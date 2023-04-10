@@ -1008,11 +1008,14 @@ body.dark-theme {
     padding-right: 0;
   }
 
-  .skills__container,
   .qualification__container,
   .services__container,
   .contact__container{
     grid-template-columns: repeat(2, max-content);
+  }
+
+  .skills__container{
+    grid-template-columns: repeat(3,max-content);
   }
 
   .skills__container,
@@ -1023,7 +1026,7 @@ body.dark-theme {
   .qualification__container{
     display: flex;
     justify-content: center;
-    column-gap: 5rem;
+    column-gap: 3rem;
   }
 
   .projects__container{
@@ -1190,7 +1193,7 @@ body.dark-theme {
   } */
 
   .skills__container{
-    column-gap: 10rem;
+    column-gap: 6rem;
   }
 
   .skills__title{
