@@ -1014,9 +1014,7 @@ body.dark-theme {
     grid-template-columns: repeat(2, max-content);
   }
 
-  .skills__container{
-    grid-template-columns: repeat(3,max-content);
-  }
+  
 
   .skills__container,
   .services__container{
@@ -1115,6 +1113,11 @@ body.dark-theme {
     bottom: 5rem;
   }
 
+  .skills__container{
+    grid-template-columns: repeat(3,max-content);
+    column-gap: 2.5rem;
+  }
+
   /* Change background header */
   .bg-header{
     box-shadow: 0 4px 20px hsla(207, 24%, 35%, .1);
@@ -1193,6 +1196,7 @@ body.dark-theme {
   } */
 
   .skills__container{
+    grid-template-columns: repeat(3,max-content);
     column-gap: 6rem;
   }
 
