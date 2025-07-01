@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
 
         <!--=============== REMIXICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
         
         <!--=============== SWIPER CSS ===============-->
         <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
@@ -46,11 +46,11 @@
                             </a>
                         </li>
 
-                        <li class="nav__item">
+                        <!-- <li class="nav__item">
                             <a href="#services" class="nav__link">
                                 <i class="ri-briefcase-line"></i> Services
                             </a>
-                        </li>
+                        </li> -->
 
                         <li class="nav__item">
                             <a href="#projects" class="nav__link">
@@ -88,21 +88,21 @@
             <!--==================== HOME ====================-->
             <section class="home section" id="home">
                 <div class="home__container container grid section__border">
-                    <div class="home__data grid">
-                        <h1 class="home__title">
-                            Hi, I'm Mica <br>
-                            Frontend Developer <br>
-                            Based In Argentina <br>
-                        </h1>
-
-                        <div class="home__blob grid">
+                    <div class="home__blob grid">
                             <div class="home__perfil">
                                 <img src="./assets/img/perfil-2.png" alt="home perfil">
                             </div>
 
                             <img src="./assets/img/shape-waves.svg" alt="" class="home__shape-waves">
                             <img src="./assets/img/shape-circle.svg" alt="" class="home__shape-circle"> 
-                        </div>
+                    </div>
+                        
+                    <div class="home__data grid">
+                        <h1 class="home__title">
+                            Hi, I'm Mica <br>
+                            Full-Stack Developer <br>
+                            Based In Argentina <br>
+                        </h1>
 
                         <ul class="home__social">
                             <a href="https://www.linkedin.com/in/micaela-kloster-quintana/" target="_blank" class="home__social-link">
@@ -113,23 +113,19 @@
                                 <i class="ri-github-line"></i>
                             </a>
 
-                            <a href="https://www.instagram.com/micaela.klosterquintana/" target="_blank" class="home__social-link">
-                                <i class="ri-instagram-line"></i>
-                            </a>
                         </ul>
                     </div>
 
                     <!--==================== HOME INFO 1 ====================-->
-                    <div class="home__info">
+                    <!-- <div class="home__info">
                         <div>
                             <h3 class="home__info-title">
                                 BIOGRAPHY
                             </h3>
 
                             <p class="home__info-description">
-                                Hi, I'm Mica, Frontend Developer.
-                                Passionate about designing beautiful web
-                                interfaces. Based in Argentina.
+                                Hi, I'm Mica, Full-Stack Developer.
+                                Based in Argentina.
                             </p>
                         </div>
 
@@ -154,10 +150,10 @@
                                 UI/UX Design <br>
                             </p>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!--==================== HOME INFO 2 ====================-->
-                    <div class="home__info">
+                    <!-- <div class="home__info">
                         <div>
                             <h3 class="home__info-title">
                                 YEARS OF EXPERIENCE
@@ -189,19 +185,19 @@
                         </div>
                     </div>
 
-                </div>
-            </section>
+                </div> -->
+            </section> 
 
             <!--==================== SKILLS ====================-->
             <section class="skills section" id="skills">
-                <h2 class="section__title">Skills</h2>
-                <span class="section__subtitle">My favorite skills</span>
+                <h2 class="section__title">Technologies</h2>
+                <span class="section__subtitle">Technologies I learned</span>
 
                 <div class="skills__container container grid section__border">
                 <!--==================== SKILLS 1 ====================-->
                 <div class="skills__content">
                     <h3 class="skills__title">
-                        <i class="ri-braces-line"></i> Frontend Developer
+                        <i class="ri-braces-line"></i> Frontend
                     </h3>
 
                     <div class="skills__info">
@@ -259,6 +255,15 @@
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
 
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="./assets/img/angularjs.svg" alt="skills image">
+                            </div>
+
+                            <h3 class="skills__name">Angular</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+
                     </div>
                 </div>
 
@@ -303,7 +308,7 @@
                 <!--==================== SKILLS 3 ====================-->
                 <div class="skills__content">
                     <h3 class="skills__title">
-                        <i class="ri-code-s-slash-line"></i> Other Programming Languages & Services
+                        <i class="ri-expand-left-right-line"></i> Backend
                     </h3>
 
                     <div class="skills__info">
@@ -338,11 +343,59 @@
 
                         <div class="skills__data">
                             <div class="skills__blob">
+                                <img src="./assets/img/nestjs.svg" alt="skills image">
+                            </div>
+
+                            <h3 class="skills__name">Typescript</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="./assets/img/typescript.svg" alt="skills image">
+                            </div>
+
+                            <h3 class="skills__name">NestJS</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="./assets/img/typeorm.svg" alt="skills image">
+                            </div>
+
+                            <h3 class="skills__name">TypeORM</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                       
+
+                    </div>
+                </div>
+
+                <!--==================== SKILLS 3 ====================-->
+                <div class="skills__content">
+                    <h3 class="skills__title">
+                        <i class="ri-stack-line"></i> Databases & Services
+                    </h3>
+
+                    <div class="skills__info">
+                       
+                        <div class="skills__data">
+                            <div class="skills__blob">
                                 <img src="./assets/img/mysql.svg" alt="skills image">
                             </div>
 
                             <h3 class="skills__name">MySQL</h3>
                             <span class="skills__subtitle">Basic</span>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="./assets/img/postgresql.svg" alt="skills image">
+                            </div>
+
+                            <h3 class="skills__name">Postgresql</h3>
+                            <span class="skills__subtitle">Intermediate</span>
                         </div>
 
 
@@ -361,6 +414,24 @@
                             </div>
 
                             <h3 class="skills__name">Redis</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="./assets/img/nginx.svg" alt="skills image">
+                            </div>
+
+                            <h3 class="skills__name">Nginx</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="./assets/img/pm2.svg" alt="skills image">
+                            </div>
+
+                            <h3 class="skills__name">pm2</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
 
@@ -552,7 +623,7 @@
             </section>
 
             <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
+            <!-- <section class="services section" id="services">
                 <h2 class="section__title">Services</h2>
                 <span class="section__subtitle">What I Offer</span>
 
@@ -593,7 +664,7 @@
 
                 </div>
             </section>
-
+ -->
             <!--==================== PROJECTS ====================-->
             <section class="projects section" id="projects">
                 <h2 class="section__title">Projects</h2>
@@ -872,9 +943,6 @@
                         <i class="ri-github-line"></i>
                     </a>
 
-                    <a href="https://www.instagram.com/micaela.klosterquintana/" target="_blank" class="footer__social-link">
-                        <i class="ri-instagram-line"></i>
-                    </a>
                 </ul>
 
                 <span class="footer__copy">
