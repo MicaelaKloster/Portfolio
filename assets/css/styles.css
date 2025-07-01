@@ -1010,12 +1010,12 @@ body.dark-theme {
     text-align: center;
   }
 
-  .home__data{
+  /* .home__data{
     order: 2;
-  }
+  } */
 
   .home__blob {
-        justify-self: center;
+    justify-self: center;
   }
 
   .home__info:nth-child(3){
