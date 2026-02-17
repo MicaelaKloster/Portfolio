@@ -1,984 +1,696 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    
+    <!--=============== FONTS ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    
+    <title>Mica — Full-Stack Developer</title>
+</head>
+<body>
+    <!--==================== LOADING SCREEN ====================-->
+    <div class="loading" id="loading">
+        <div class="loading__content">
+            <div class="loading__spinner"></div>
+            <p class="loading__text">Loading...</p>
+        </div>
+    </div>
 
-        <!--=============== FAVICON ===============-->
-        <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <!--==================== SCROLL PROGRESS ====================-->
+    <div class="scroll-progress" id="scroll-progress"></div>
 
-        <!--=============== REMIXICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-        
-        <!--=============== SWIPER CSS ===============-->
-        <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <span class="nav__logo-highlight">M</span>ica
+            </a>
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="./assets/css/styles.css">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">Skills</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#work" class="nav__link">Work</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
 
-        <title>MicaDev - Portfolio Website</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">
-                    Mica
-                </a>
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class="ri-home-5-line"></i> Home
-                            </a>
-                        </li>
+            <div class="nav__actions">
+                <i class="ri-moon-line nav__theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="ri-trophy-line"></i> Skills
-                            </a>
-                        </li>
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container">
+                <div class="home__content">
+                    <div class="home__badge">
+                        <span class="home__badge-dot"></span>
+                        Available for work
+                    </div>
+                    
+                    <h1 class="home__title">
+                        Hi, I'm <span class="home__title-name">Mica</span>
+                    </h1>
+                    
+                    <p class="home__subtitle">
+                        Full-Stack Developer crafting elegant digital experiences
+                    </p>
+                    
+                    <div class="home__location">
+                        <i class="ri-map-pin-line"></i>
+                        Based in Santa Fe, Argentina
+                    </div>
 
-                        <li class="nav__item">
-                            <a href="#qualification" class="nav__link">
-                                <i class="ri-book-open-line"></i> Qualification
-                            </a>
-                        </li>
+                    <div class="home__buttons">
+                        <a href="#contact" class="button button--primary">
+                            Get in touch
+                            <i class="ri-arrow-right-up-line"></i>
+                        </a>
+                        <a href="#work" class="button button--secondary">
+                            View work
+                        </a>
+                    </div>
 
-                        <!-- <li class="nav__item">
-                            <a href="#services" class="nav__link">
-                                <i class="ri-briefcase-line"></i> Services
-                            </a>
-                        </li> -->
-
-                        <li class="nav__item">
-                            <a href="#projects" class="nav__link">
-                                <i class="ri-image-line"></i> Projects
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="ri-chat-3-line"></i> Contact
-                            </a>
-                        </li>
-                    </ul>
-
-                    <!-- Close Button -->
-                    <div class="nav__close" id="nav-close">
-                        <i class="ri-close-line"></i>
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/micaela-kloster-quintana/" target="_blank" class="home__social-link" aria-label="LinkedIn">
+                            <i class="ri-linkedin-line"></i>
+                        </a>
+                        <a href="https://github.com/MicaelaKloster" target="_blank" class="home__social-link" aria-label="GitHub">
+                            <i class="ri-github-line"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="nav__buttons">
-                    <!-- Theme change button -->
-                    <i class="ri-moon-line change-theme" id="theme-button"></i>
-
-                    <!-- Toggle Button -->
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="ri-menu-4-line"></i>
+                <div class="home__image">
+                    <div class="home__image-wrapper">
+                        <img src="./assets/img/Mica-2.jpg" alt="Micaela Kloster" class="home__img">
+                        <div class="home__image-border"></div>
                     </div>
                 </div>
-            </nav>
-        </header>
+            </div>
 
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                <div class="home__container container grid section__border">
-                    <div class="home__blob grid">
-                            <div class="home__perfil">
-                                <img src="./assets/img/perfil-4.png" alt="home perfil">
+            <div class="home__scroll">
+                <span class="home__scroll-text">Scroll down</span>
+                <div class="home__scroll-line"></div>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="about__container">
+                    <div class="about__content">
+                        <span class="section__label">About me</span>
+                        <h2 class="section__title">Building digital products with passion and precision</h2>
+                        <p class="about__description">
+                            I'm a Full-Stack Developer passionate about creating beautiful, functional web applications. 
+                            With expertise in both front-end and back-end development, I bring ideas to life through 
+                            clean code and thoughtful design.
+                        </p>
+                        <p class="about__description">
+                            My approach combines technical excellence with creative problem-solving, ensuring every 
+                            project is not only functional but also delightful to use.
+                        </p>
+                    </div>
+
+                    <div class="about__stats">
+                        <div class="about__stat">
+                            <h3 class="about__stat-number" data-target="3">0</h3>
+                            <p class="about__stat-label">Years Experience</p>
+                        </div>
+                        <div class="about__stat">
+                            <h3 class="about__stat-number" data-target="15">0</h3>
+                            <p class="about__stat-label">Projects Completed</p>
+                        </div>
+                        <div class="about__stat">
+                            <h3 class="about__stat-number" data-target="5">0</h3>
+                            <p class="about__stat-label">Technologies Mastered</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== SKILLS ====================-->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <span class="section__label">My expertise</span>
+                <h2 class="section__title">Skills & Technologies</h2>
+
+                <div class="skills__container">
+                    <div class="skills__category">
+                        <h3 class="skills__category-title">
+                            <i class="ri-braces-line"></i> Frontend
+                        </h3>
+                        <div class="skills__list">
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/html-1.svg" alt="HTML5">
+                                </div>
+                                <span class="skill__name">HTML</span>
+                                <span class="skill__level">Advanced</span>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/css-3.svg" alt="CSS3">
+                                </div>
+                                <span class="skill__name">CSS</span>
+                                <span class="skill__level">Advanced</span>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/bootstrap-5-1.svg" alt="Bootstrap">
+                                </div>
+                                <span class="skill__name">Bootstrap</span>
+                                <span class="skill__level">Advanced</span>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/logo-javascript.svg" alt="JavaScript">
+                                </div>
+                                <span class="skill__name">JavaScript</span>
+                                <span class="skill__level">Intermediate</span>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/react-2.svg" alt="React">
+                                </div>
+                                <span class="skill__name">React</span>
+                                <span class="skill__level">Basic</span>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/git-icon.svg" alt="Git">
+                                </div>
+                                <span class="skill__name">Git</span>
+                                <span class="skill__level">Intermediate</span>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/angularjs.svg" alt="Angular">
+                                </div>
+                                <span class="skill__name">Angular</span>
+                                <span class="skill__level">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__category">
+                        <h3 class="skills__category-title">
+                            <i class="ri-pantone-line"></i> Web Designer
+                        </h3>
+                        <div class="skills__list">
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/figma-1.svg" alt="Figma">
+                                </div>
+                                <span class="skill__name">Figma</span>
+                                <span class="skill__level">Intermediate</span>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/invision.svg" alt="InVision">
+                                </div>
+                                <span class="skill__name">InVision</span>
+                                <span class="skill__level">Intermediate</span>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/webflow-icon.svg" alt="Webflow">
+                                </div>
+                                <span class="skill__name">Webflow</span>
+                                <span class="skill__level">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__category">
+                        <h3 class="skills__category-title">
+                            <i class="ri-expand-left-right-line"></i> Backend
+                        </h3>
+                        <div class="skills__list">
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/nodejs-ar21.svg" alt="Node.js">
+                                </div>
+                                <span class="skill__name">Node.js</span>
+                                <span class="skill__level">Intermediate</span>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/expressjs-ar21.svg" alt="Express.js">
+                                </div>
+                                <span class="skill__name">Express.js</span>
+                                <span class="skill__level">Basic</span>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/mysql.svg" alt="MySQL">
+                                </div>
+                                <span class="skill__name">MySQL</span>
+                                <span class="skill__level">Intermediate</span>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/postgresql.svg" alt="PostgreSQL">
+                                </div>
+                                <span class="skill__name">PostgreSQL</span>
+                                <span class="skill__level">Basic</span>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__icon">
+                                    <img src="./assets/img/python.svg" alt="Python">
+                                </div>
+                                <span class="skill__name">Python</span>
+                                <span class="skill__level">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== WORK ====================-->
+        <section class="work section" id="work">
+            <div class="container">
+                <span class="section__label">Portfolio</span>
+                <h2 class="section__title">Selected Work</h2>
+
+                <div class="work__container">
+                    <!--==================== PROJECT 1 ====================-->
+                    <article class="work__card">
+                        <div class="work__image">
+                            <img src="./assets/img/Projects Preview Image/preview-16.png" alt="Club Macabras">
+                            <div class="work__overlay">
+                                <a href="https://clubmacabras.netlify.app/" target="_blank" class="work__link">
+                                    View Project <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__tag">Full-Stack</span>
+                            <h3 class="work__title">Club Macabras</h3>
+                            <p class="work__description">Node.js + Express.js + React 18 + Vite + Tailwindcss + PostgreSQL</p>
+                        </div>
+                    </article>
+
+                    <!--==================== PROJECT 2 ====================-->
+                    <article class="work__card">
+                        <div class="work__image">
+                            <img src="./assets/img/Projects Preview Image/preview-15.png" alt="Sistema de Encuestas">
+                            <div class="work__overlay">
+                                <a href="https://github.com/MicaelaKloster/Sistema-de-Encuestas" target="_blank" class="work__link">
+                                    View Project <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__tag">Full-Stack</span>
+                            <h3 class="work__title">Sistema de Encuestas Anónimas</h3>
+                            <p class="work__description">NestJS + Angular + PostgreSQL</p>
+                        </div>
+                    </article>
+
+                    <!--==================== PROJECT 3 ====================-->
+                    <article class="work__card">
+                        <div class="work__image">
+                            <img src="./assets/img/Projects Preview Image/preview-14.png" alt="Historia Clinica">
+                            <div class="work__overlay">
+                                <a href="https://github.com/MicaelaKloster/Historia-Clinica---Instituto-Medico-Las-Luciernagas" target="_blank" class="work__link">
+                                    View Project <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__tag">Backend</span>
+                            <h3 class="work__title">Historia Clinica</h3>
+                            <p class="work__description">Python medical records management system</p>
+                        </div>
+                    </article>
+
+                    <!--==================== PROJECT 4 ====================-->
+                    <article class="work__card">
+                        <div class="work__image">
+                            <img src="./assets/img/Projects Preview Image/preview-13.png" alt="Lista de Tareas">
+                            <div class="work__overlay">
+                                <a href="https://lista-tareas-pendientes-react-ts.netlify.app/" target="_blank" class="work__link">
+                                    View Project <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__tag">React</span>
+                            <h3 class="work__title">Lista de Tareas</h3>
+                            <p class="work__description">React + TypeScript task management app</p>
+                        </div>
+                    </article>
+
+                    <!--==================== PROJECT 5 ====================-->
+                    <article class="work__card">
+                        <div class="work__image">
+                            <img src="./assets/img/Projects Preview Image/preview-12.png" alt="Car dealership">
+                            <div class="work__overlay">
+                                <a href="https://github.com/MicaelaKloster/TFI-PROG3" target="_blank" class="work__link">
+                                    View Project <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__tag">Backend</span>
+                            <h3 class="work__title">Car Dealership</h3>
+                            <p class="work__description">Backend system for car dealership management</p>
+                        </div>
+                    </article>
+
+                    <!--==================== PROJECT 6 ====================-->
+                    <article class="work__card">
+                        <div class="work__image">
+                            <img src="./assets/img/Projects Preview Image/preview-8.png" alt="Vans Product Card">
+                            <div class="work__overlay">
+                                <a href="https://vans-product-card.netlify.app/" target="_blank" class="work__link">
+                                    View Project <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__tag">Web Development</span>
+                            <h3 class="work__title">Vans Product Card</h3>
+                            <p class="work__description">Interactive product card with modern design</p>
+                        </div>
+                    </article>
+
+                    <!--==================== PROJECT 7 ====================-->
+                    <article class="work__card">
+                        <div class="work__image">
+                            <img src="./assets/img/Projects Preview Image/preview-7.png" alt="JG Jewelry">
+                            <div class="work__overlay">
+                                <a href="https://www.instagram.com/j_g__joyeria/" target="_blank" class="work__link">
+                                    View Instagram <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__tag">Brand Design</span>
+                            <h3 class="work__title">JG Jewelry</h3>
+                            <p class="work__description">Concept brand for Instagram social media</p>
+                        </div>
+                    </article>
+
+                    <!--==================== PROJECT 8 ====================-->
+                    <article class="work__card">
+                        <div class="work__image">
+                            <img src="./assets/img/Projects Preview Image/preview-6.png" alt="Calendar Space">
+                            <div class="work__overlay">
+                                <a href="https://calendar-webflow-101.webflow.io" target="_blank" class="work__link">
+                                    View Demo <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__tag">Webflow</span>
+                            <h3 class="work__title">Calendar Space - Webflow 101</h3>
+                            <p class="work__description">Calendar application built with Webflow</p>
+                        </div>
+                    </article>
+
+                    <!--==================== PROJECT 9 ====================-->
+                    <article class="work__card">
+                        <div class="work__image">
+                            <img src="./assets/img/Projects Preview Image/preview-5.png" alt="Chevrolet Camaro">
+                            <div class="work__overlay">
+                                <a href="https://www.figma.com/file/5tNbM1POC7gV89Ygstyr2V/Camaro-V8---Website?node-id=0%3A1&t=EOwaIP8E0kD27eFe-1" target="_blank" class="work__link">
+                                    View in Figma <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__tag">Web Design</span>
+                            <h3 class="work__title">Chevrolet Camaro Website</h3>
+                            <p class="work__description">Complete website design in Figma</p>
+                        </div>
+                    </article>
+
+                    <!--==================== PROJECT 10 ====================-->
+                    <article class="work__card">
+                        <div class="work__image">
+                            <img src="./assets/img/Projects Preview Image/preview-1.png" alt="Modern Gym">
+                            <div class="work__overlay">
+                                <a href="https://modern-gym.netlify.app/" target="_blank" class="work__link">
+                                    View Demo <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__tag">Web Development</span>
+                            <h3 class="work__title">Modern Gym Website</h3>
+                            <p class="work__description">Responsive gym website with modern design</p>
+                        </div>
+                    </article>
+
+                    <!--==================== PROJECT 11 ====================-->
+                    <article class="work__card">
+                        <div class="work__image">
+                            <img src="./assets/img/Projects Preview Image/preview-1.png" alt="Responsive Website">
+                            <div class="work__overlay">
+                                <a href="https://micaelakloster.github.io/Responsive-Design-Website-Practice-1/" target="_blank" class="work__link">
+                                    View Demo <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__tag">Web Development</span>
+                            <h3 class="work__title">Responsive Website Practice</h3>
+                            <p class="work__description">Modern responsive website with clean design</p>
+                        </div>
+                    </article>
+
+                    <!--==================== PROJECT 12 ====================-->
+                    <article class="work__card">
+                        <div class="work__image">
+                            <img src="./assets/img/Projects Preview Image/preview-2.png" alt="E-Commerce Store">
+                            <div class="work__overlay">
+                                <a href="https://watches-ecommerce-store.netlify.app/" target="_blank" class="work__link">
+                                    View Demo <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__tag">E-Commerce</span>
+                            <h3 class="work__title">Watches E-Commerce Store</h3>
+                            <p class="work__description">Full-featured e-commerce platform</p>
+                        </div>
+                    </article>
+
+                    <!--==================== PROJECT 13 ====================-->
+                    <article class="work__card">
+                        <div class="work__image">
+                            <img src="./assets/img/Projects Preview Image/preview-3.png" alt="NFT Website">
+                            <div class="work__overlay">
+                                <a href="https://nfts-website.netlify.app/" target="_blank" class="work__link">
+                                    View Demo <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__tag">Web3</span>
+                            <h3 class="work__title">NFT Website</h3>
+                            <p class="work__description">Modern NFT showcase platform</p>
+                        </div>
+                    </article>
+
+                    <!--==================== PROJECT 14 ====================-->
+                    <article class="work__card">
+                        <div class="work__image">
+                            <img src="./assets/img/Projects Preview Image/preview-4.png" alt="App Design">
+                            <div class="work__overlay">
+                                <a href="https://www.canva.com/design/DAFRW-R-Zuo/3L-_MgHdKd141JJFHdolpw/watch?utm_content=DAFRW-R-Zuo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank" class="work__link">
+                                    View Demo <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__tag">UI/UX Design</span>
+                            <h3 class="work__title">Application Design</h3>
+                            <p class="work__description">Mobile application interface design</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== CONTACT ====================-->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="contact__container">
+                    <div class="contact__content">
+                        <span class="section__label">Get in touch</span>
+                        <h2 class="section__title">Let's work together</h2>
+                        <p class="contact__text">
+                            Have a project in mind? I'd love to hear about it. 
+                            Send me a message and I'll get back to you as soon as possible.
+                        </p>
+
+                        <div class="contact__info">
+                            <div class="contact__info-item">
+                                <i class="ri-mail-line"></i>
+                                <div>
+                                    <span class="contact__info-label">Email</span>
+                                    <a href="/cdn-cgi/l/email-protection#d0bdb9b3b1b5bcb1febbbcbfa3a4b5a2a1a5b9bea4b1beb190b7bdb1b9bcfeb3bfbd" class="contact__info-value">
+                                        <span class="__cf_email__" data-cfemail="2f42464c4e4a434e014443405c5b4a5d5e5a46415b4e414e6f48424e4643014c4042">[email&#160;protected]</span>
+                                    </a>
+                                </div>
                             </div>
 
-                            <img src="./assets/img/shape-waves.svg" alt="" class="home__shape-waves">
-                            <img src="./assets/img/shape-circle.svg" alt="" class="home__shape-circle"> 
+                            <div class="contact__info-item">
+                                <i class="ri-whatsapp-line"></i>
+                                <div>
+                                    <span class="contact__info-label">WhatsApp</span>
+                                    <a href="https://api.whatsapp.com/send?phone=5493425254198&text=Hello, more information!" target="_blank" class="contact__info-value">
+                                        +54 9 342 525 4198
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                        
-                    <div class="home__data grid">
-                        <h1 class="home__title">
-                            Hi, I'm Mica <br>
-                            Full-Stack Developer <br>
-                            Based In Argentina <br>
-                        </h1>
 
-                        <ul class="home__social">
-                            <a href="https://www.linkedin.com/in/micaela-kloster-quintana/" target="_blank" class="home__social-link">
-                                <i class="ri-linkedin-box-line"></i>
-                            </a>
+                    <form class="contact__form" id="contact-form">
+                        <div class="contact__form-group">
+                            <label for="contact-name" class="contact__form-label">Name</label>
+                            <input 
+                                type="text" 
+                                id="contact-name" 
+                                name="user_name" 
+                                class="contact__form-input" 
+                                placeholder="Your name"
+                                required
+                            >
+                        </div>
 
-                            <a href="https://github.com/MicaelaKloster" target="_blank" class="home__social-link">
-                                <i class="ri-github-line"></i>
-                            </a>
+                        <div class="contact__form-group">
+                            <label for="contact-email" class="contact__form-label">Email</label>
+                            <input 
+                                type="email" 
+                                id="contact-email" 
+                                name="user_email" 
+                                class="contact__form-input" 
+                                placeholder="your.email@example.com"
+                                required
+                            >
+                        </div>
 
+                        <div class="contact__form-group">
+                            <label for="contact-project" class="contact__form-label">Message</label>
+                            <textarea 
+                                id="contact-project" 
+                                name="user_project" 
+                                class="contact__form-input contact__form-textarea" 
+                                placeholder="Tell me about your project..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="button button--primary button--full">
+                            <span>Send Message</span>
+                            <i class="ri-send-plane-line"></i>
+                        </button>
+
+                        <p class="contact__message" id="contact-message"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">
+                        <span class="footer__logo-highlight">M</span>ica
+                    </a>
+                    <p class="footer__description">
+                        Full-Stack Developer crafting elegant digital experiences
+                    </p>
+                </div>
+
+                <div class="footer__links">
+                    <div class="footer__group">
+                        <h4 class="footer__title">Navigation</h4>
+                        <ul class="footer__list">
+                            <li><a href="#home" class="footer__link">Home</a></li>
+                            <li><a href="#about" class="footer__link">About</a></li>
+                            <li><a href="#skills" class="footer__link">Skills</a></li>
+                            <li><a href="#work" class="footer__link">Work</a></li>
                         </ul>
                     </div>
 
-                    <!--==================== HOME INFO 1 ====================-->
-                    <!-- <div class="home__info">
-                        <div>
-                            <h3 class="home__info-title">
-                                BIOGRAPHY
-                            </h3>
-
-                            <p class="home__info-description">
-                                Hi, I'm Mica, Full-Stack Developer.
-                                Based in Argentina.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="home__info-title">
-                                CONTACT
-                            </h3>
-
-                            <p class="home__info-description">
-                                Santa Fe, Argentina <br>
-                                micaela.klosterquintana@gmail.com <br>
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="home__info-title">
-                                SERVICES
-                            </h3>
-
-                            <p class="home__info-description">
-                                Website Design <br>
-                                UI/UX Design <br>
-                            </p>
-                        </div>
-                    </div> -->
-
-                    <!--==================== HOME INFO 2 ====================-->
-                    <!-- <div class="home__info">
-                        <div>
-                            <h3 class="home__info-title">
-                                YEARS OF EXPERIENCE
-                            </h3>
-
-                            <p class="home__info-number">
-                                03+
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="home__info-title">
-                                COMPLETED PROJECTS
-                            </h3>
-
-                            <p class="home__info-number">
-                                15+
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="home__info-title">
-                                COMPANIES WORKED
-                            </h3>
-
-                            <p class="home__info-number">
-                                03+
-                            </p>
-                        </div>
-                    </div>
-
-                </div> -->
-            </section> 
-
-            <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
-                <h2 class="section__title">Technologies</h2>
-                <span class="section__subtitle">Technologies I learned</span>
-
-                <div class="skills__container container grid section__border">
-                <!--==================== SKILLS 1 ====================-->
-                <div class="skills__content">
-                    <h3 class="skills__title">
-                        <i class="ri-braces-line"></i> Frontend
-                    </h3>
-
-                    <div class="skills__info">
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/html-1.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">HTML</h3>
-                            <span class="skills__subtitle">Advance</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/css-3.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">CSS</h3>
-                            <span class="skills__subtitle">Advance</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/bootstrap-5-1.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Bootstrap</h3>
-                            <span class="skills__subtitle">Advance</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/logo-javascript.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">JavaScript</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/react-2.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">React</h3>
-                            <span class="skills__subtitle">Basic</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/git-icon.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Git</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/angularjs.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Angular</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                
-
-                <!--==================== SKILLS 2 ====================-->
-                <div class="skills__content">
-                    <h3 class="skills__title">
-                        <i class="ri-pantone-line"></i> Web Designer
-                    </h3>
-
-                    <div class="skills__info">
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/figma-1.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Figma</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/invision.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">InVision</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/webflow-icon.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Webflow</h3>
-                            <span class="skills__subtitle">Intermediate<span>
+                    <div class="footer__group">
+                        <h4 class="footer__title">Connect</h4>
+                        <div class="footer__social">
+                            <a href="https://www.linkedin.com/in/micaela-kloster-quintana/" target="_blank" class="footer__social-link" aria-label="LinkedIn">
+                                <i class="ri-linkedin-line"></i>
+                            </a>
+                            <a href="https://github.com/MicaelaKloster" target="_blank" class="footer__social-link" aria-label="GitHub">
+                                <i class="ri-github-line"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-
-                <!--==================== SKILLS 3 ====================-->
-                <div class="skills__content">
-                    <h3 class="skills__title">
-                        <i class="ri-expand-left-right-line"></i> Backend
-                    </h3>
-
-                    <div class="skills__info">
-                       
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/nodejs-ar21.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Node.js</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/expressjs-ar21.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Express</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-                       
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/handlebarsjs-icon.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Handlebars</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/nestjs.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Typescript</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-                        
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/typescript.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">NestJS</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/typeorm.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">TypeORM</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-                       
-
-                    </div>
-                </div>
-
-                <!--==================== SKILLS 3 ====================-->
-                <div class="skills__content">
-                    <h3 class="skills__title">
-                        <i class="ri-stack-line"></i> Databases & Services
-                    </h3>
-
-                    <div class="skills__info">
-                       
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/mysql.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">MySQL</h3>
-                            <span class="skills__subtitle">Basic</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/postgresql.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Postgresql</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/npmjs-ar21.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">npm</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/redis-icon.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Redis</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/nginx.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Nginx</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/pm2.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">pm2</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/getpostman-icon.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Postman</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/c_icon.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">C++</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/python.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Python</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="./assets/img/java.svg" alt="skills image">
-                            </div>
-
-                            <h3 class="skills__name">Java</h3>
-                            <span class="skills__subtitle">Basic</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                </div>
-            </section>
-
-            <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section" id="qualification">
-                <h2 class="section__title">Qualification</h2>
-                <span class="section__subtitle">Experience & Education</span>
-
-                <div class="qualification__container container grid section__border">
-                    <!--==================== QUALIFICATION 1 ====================-->
-                    <div class="qualification__content">
-                        <h3 class="qualification__title">
-                            <i class="ri-pencil-ruler-2-line"></i> Education
-                        </h3>
-
-                        <div class="qualification__info">
-                            <div>
-                                <h3 class="qualification__name">
-                                    English
-                                </h3>
-
-                                <span class="qualification__country">Institute - Argentina</span>
-                                <span class="qualification__year">2006 - 2016</span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__name">
-                                    Web Development Technician
-                                </h3>
-
-                                <span class="qualification__country">UNER University - Argentina</span>
-                                <span class="qualification__year">2022- Present</span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__name">
-                                    Diploma in Website and Mobile Application Development
-                                </h3>
-
-                                <span class="qualification__country">Carlos Slim Foundation - México</span>
-                                <span class="qualification__year">2021 - 2022</span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__name">
-                                    Frontend Developer
-                                </h3>
-
-                                <span class="qualification__country">Carlos Slim Foundation - México</span>
-                                <span class="qualification__year">2021 - 2022</span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__name">
-                                    Backend Developer
-                                </h3>
-
-                                <span class="qualification__country">Carlos Slim Foundation - México</span>
-                                <span class="qualification__year">2021 - 2022</span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__name">
-                                    Video Games Developer
-                                </h3>
-
-                                <span class="qualification__country">Carlos Slim Foundation - México</span>
-                                <span class="qualification__year">2021 - 2022</span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__name">
-                                    Database Administrator
-                                </h3>
-
-                                <span class="qualification__country">Carlos Slim Foundation - México</span>
-                                <span class="qualification__year">2021 - 2022</span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__name">
-                                    UX/UI Design
-                                </h3>
-
-                                <span class="qualification__country">Carlos Slim Foundation - México</span>
-                                <span class="qualification__year">2022 - Present</span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__name">
-                                   Graphic Designer
-                                </h3>
-
-                                <span class="qualification__country">Figma</span>
-                                <span class="qualification__year">2022 - Present</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--==================== QUALIFICATION 2 ====================-->
-                    <div class="qualification__content">
-                        <h3 class="qualification__title">
-                            <i class="ri-building-line"></i> Work
-                        </h3>
-
-                        <div class="qualification__info">
-                            <div>
-                                <h3 class="qualification__name">
-                                    Intership in Technical Tutoring
-                                </h3>
-
-                                <span class="qualification__country">Ministry of Economy - Santa Fe, Argentina</span>
-                                <span class="qualification__year">April 2023 - Present</span>
-                            </div>
-                        <div class="qualification__info">
-                            <div>
-                                <h3 class="qualification__name">
-                                    Data Collection for Security Systems and Artificial Intelligence
-                                </h3>
-
-                                <span class="qualification__country">Remotasks - USA</span>
-                                <span class="qualification__year">2021 - 2023</span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__name">
-                                    Frontend Developer
-                                </h3>
-
-                                <span class="qualification__country">Freelancer</span>
-                                <span class="qualification__year">2021 - Present</span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__name">
-                                    Graphic Designer
-                                </h3>
-
-                                <span class="qualification__country">Freelancer</span>
-                                <span class="qualification__year">2021 - Present</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <img src="./assets/img/shape-circle.svg" alt="qualification image" class="qualification__img">
-            </section>
-
-            <!--==================== SERVICES ====================-->
-            <!-- <section class="services section" id="services">
-                <h2 class="section__title">Services</h2>
-                <span class="section__subtitle">What I Offer</span>
-
-                <div class="services__container container grid section__border">
-                    <div class="services__card">
-                        <i class="ri-layout-4-line"></i>
-
-                        <h2 class="services__title">
-                            UI/UX <br>
-                            Designer
-                        </h2>
-
-                        <p class="services__description">
-                            Service that provides the best quality and at 
-                            the request of the client, with professional 
-                            work and customer support.
-                        </p>
-
-                        <div class="services__border"></div>
-                    </div>
-
-                    <div class="services__card">
-                        <i class="ri-code-line"></i>
-
-                        <h2 class="services__title">
-                           Website <br>
-                            Design
-                        </h2>
-
-                        <p class="services__description">
-                            Service that provides the best quality and at 
-                            the request of the client, with professional 
-                            work and customer support.
-                        </p>
-
-                        <div class="services__border"></div>
-                    </div>
-
-                </div>
-            </section>
- -->
-            <!--==================== PROJECTS ====================-->
-            <section class="projects section" id="projects">
-                <h2 class="section__title">Projects</h2>
-                <span class="section__subtitle">Most recent work</span>
-
-                <div class="container section__border">
-                    <div class="projects__container swiper">
-                        <div class="swiper-wrapper">
-                            <!--==================== PROJECT 13 ====================-->
-                            <div class="projects__content swiper-slide">
-                                <img src="./assets/img/Projects Preview Image/preview-16.png" alt="Plataforma de capacitación de marroquinería" class="projects__img">
-
-                                <div>
-                                    <span class="projects__subtitle">Node.js + Express.js + React 18 + Vite + Tailwindcss + PostgreSQL</span>
-                                    <h1 class="projects__title">Club Macabras</h1>
-
-                                    <a href="https://clubmacabras.netlify.app/" target="_blank" class="projects__button">
-                                        View Project <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div><!--==================== PROJECT 12 ====================-->
-                            <div class="projects__content swiper-slide">
-                                <img src="./assets/img/Projects Preview Image/preview-15.png" alt="Project image 10" class="projects__img">
-
-                                <div>
-                                    <span class="projects__subtitle">NestJS + Angular + PostgreSQL</span>
-                                    <h1 class="projects__title">Sistema de Encuestas Anónimas</h1>
-
-                                    <a href="https://github.com/MicaelaKloster/Sistema-de-Encuestas" target="_blank" class="projects__button">
-                                        View Project <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--==================== PROJECT 11 ====================-->
-                            <div class="projects__content swiper-slide">
-                                <img src="./assets/img/Projects Preview Image/preview-14.png" alt="Project image 10" class="projects__img">
-
-                                <div>
-                                    <span class="projects__subtitle">Python</span>
-                                    <h1 class="projects__title">Historia Clinica</h1>
-
-                                    <a href="https://github.com/MicaelaKloster/Historia-Clinica---Instituto-Medico-Las-Luciernagas" target="_blank" class="projects__button">
-                                        View Project <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--==================== PROJECT 10 ====================-->
-                            <div class="projects__content swiper-slide">
-                                <img src="./assets/img/Projects Preview Image/preview-13.png" alt="Project image 9" class="projects__img">
-
-                                <div>
-                                    <span class="projects__subtitle">React + TS</span>
-                                    <h1 class="projects__title">Lista de Tareas</h1>
-
-                                    <a href="https://lista-tareas-pendientes-react-ts.netlify.app/" target="_blank" class="projects__button">
-                                        View Website <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--==================== PROJECT 9 ====================-->
-                            <div class="projects__content swiper-slide">
-                                <img src="./assets/img/Projects Preview Image/preview-12.png" alt="Project image 8" class="projects__img">
-
-                                <div>
-                                    <span class="projects__subtitle">Backend</span>
-                                    <h1 class="projects__title">Car dealership</h1>
-
-                                    <a href="https://github.com/MicaelaKloster/TFI-PROG3" target="_blank" class="projects__button">
-                                        View Website <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--==================== PROJECT 8 ====================-->
-                            <div class="projects__content swiper-slide">
-                                <img src="./assets/img/Projects Preview Image/preview-8.png" alt="Project image 8" class="projects__img">
-
-                                <div>
-                                    <span class="projects__subtitle">Web</span>
-                                    <h1 class="projects__title">Vans Product Card</h1>
-
-                                    <a href="https://vans-product-card.netlify.app/" target="_blank" class="projects__button">
-                                        View Website <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                             <!--==================== PROJECT 7 ====================-->
-                             <div class="projects__content swiper-slide">
-                                <img src="./assets/img/Projects Preview Image/preview-7.png" alt="Project image 7" class="projects__img">
-
-                                <div>
-                                    <span class="projects__subtitle">Concept brand for instagram</span>
-                                    <h1 class="projects__title">JG Jewelry</h1>
-
-                                    <a href="https://www.instagram.com/j_g__joyeria/" target="_blank" class="projects__button">
-                                        View instagram <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--==================== PROJECT 6 ====================-->
-                            <div class="projects__content swiper-slide">
-                                <img src="./assets/img/Projects Preview Image/preview-6.png" alt="Project image 6" class="projects__img">
-
-                                <div>
-                                    <span class="projects__subtitle">Web</span>
-                                    <h1 class="projects__title">Calendar Space - Webflow 101</h1>
-
-                                    <a href="https://calendar-webflow-101.webflow.io" target="_blank" class="projects__button">
-                                        View demo <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--==================== PROJECT 5 ====================-->
-                            <div class="projects__content swiper-slide">
-                                <img src="./assets/img/Projects Preview Image/preview-5.png" alt="Project image 5" class="projects__img">
-
-                                <div>
-                                    <span class="projects__subtitle">Web Design</span>
-                                    <h1 class="projects__title">Chevrolet Camaro Website</h1>
-
-                                    <a href="https://www.figma.com/file/5tNbM1POC7gV89Ygstyr2V/Camaro-V8---Website?node-id=0%3A1&t=EOwaIP8E0kD27eFe-1" target="_blank" class="projects__button">
-                                        View demo in Figma <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--==================== PROJECT 1 ====================-->
-                            <div class="projects__content swiper-slide">
-                                <img src="./assets/img/Projects Preview Image/preview-1.png" alt="Project image 1" class="projects__img">
-
-                                <div>
-                                    <span class="projects__subtitle">Web</span>
-                                    <h1 class="projects__title">Modern Gym Website</h1>
-
-                                    <a href="https://modern-gym.netlify.app/" target="_blank" class="projects__button">
-                                        View demo <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!--==================== PROJECT 2 ====================-->
-                            <div class="projects__content swiper-slide">
-                                <img src="./assets/img/Projects Preview Image/preview-2.png" alt="Project image 2" class="projects__img">
-
-                                <div>
-                                    <span class="projects__subtitle">Web</span>
-                                    <h1 class="projects__title">Watches E-Commerce Store</h1>
-
-                                    <a href="https://watches-ecommerce-store.netlify.app/" target="_blank" class="projects__button">
-                                        View demo <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!--==================== PROJECT 3 ====================-->
-                            <div class="projects__content swiper-slide">
-                                <img src="./assets/img/Projects Preview Image/preview-3.png" alt="Project image 3" class="projects__img">
-
-                                <div>
-                                    <span class="projects__subtitle">Web</span>
-                                    <h1 class="projects__title">NFT Website</h1>
-
-                                    <a href="https://nfts-website.netlify.app/" target="_blank" class="projects__button">
-                                        View demo <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--==================== PROJECT 4 ====================-->
-                            <div class="projects__content swiper-slide">
-                                <img src="./assets/img/Projects Preview Image/preview-4.png" alt="Project image 4" class="projects__img">
-
-                                <div>
-                                    <span class="projects__subtitle">Design</span>
-                                    <h1 class="projects__title">Application Design</h1>
-
-                                    <a href="https://www.canva.com/design/DAFRW-R-Zuo/3L-_MgHdKd141JJFHdolpw/watch?utm_content=DAFRW-R-Zuo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank" class="projects__button">
-                                        View demo <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Swiper arrows -->
-                        <div class="swiper-button-next">
-                            <i class="ri-arrow-right-s-line"></i>
-                        </div>
-
-                        <div class="swiper-button-prev">
-                            <i class="ri-arrow-left-s-line"></i>
-                        </div>
-
-                        <!-- Swiper pagination -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </section>
-
-
-            <!--==================== CONTACT ====================-->
-            <section class="contact section" id="contact">
-                <h2 class="section__title">Contact Me</h2>
-                <span class="section__subtitle">Get in touch</span>
-
-                <div class="contact__container container grid section__border">
-                    <div class="contact__content">
-                        <h3 class="contact__title">
-                            <i class="ri-chat-3-line"> Talk to me</i>
-                        </h3>
-
-                        <div class="contact__info">
-                            <div class="contact__data">
-                                <span class="contact__data-title">Email</span>
-                                <span class="contact__data-info">micaela.klosterquintana@gmail.com</span>
-                            </div>
-
-                            <div class="contact__data">
-                                <span class="contact__data-title">WhatsApp</span>
-                                <!-- <span class="contact__data-info"></span> -->
-                                
-                                <!-- Insert a real number plus country code -->
-                                <a href="https://api.whatsapp.com/send?phone=5493425254198&text=Hello, more information!" target="_blank" class="contact__button">
-                                    Write me <i class="ri-arrow-right-line"></i>
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="contact__content">
-                        <h3 class="contact__title">
-                            <i class="ri-send-plane-line"></i> Write me your project
-                        </h3>
-
-                        <form action="" class="contact__form" id="contact-form">
-                            <div class="contact__form-div">
-                                <label class="contact__form-tag">Name</label>
-                                <input type="text" name="user_name" required placeholder="Write your name" class="contact__form-input" id="contact-name">
-                            </div>
-
-                            <div class="contact__form-div">
-                                <label class="contact__form-tag">Mail</label>
-                                <input type="email" name="user_email" required placeholder="Write your mail" class="contact__form-input" id="contact-email">
-                            </div>
-
-                            <div class="contact__form-div contact__form-area">
-                                <label class="contact__form-tag">Project</label>
-                                <textarea name="user_project" placeholder="Write your project" id="contact-project"  class="contact__form-input"></textarea>    
-                            </div>
-
-                            <p class="contact__message" id="contact-message"></p>
-
-                            <button type="submit" class="contact__button">
-                                Submit <i class="ri-arrow-right-up-line"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                        
-            </section>
-        </main>
-
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-            <div class="footer__container container">
-                <h1 class="footer__title">Mica</h1>
-                <p>Full-Stack Developer</p>
-
-                <ul class="footer__list">
-                    <li>
-                        <a href="#home" class="footer__link">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="#skills" class="footer__link">Skills</a>
-                    </li>
-
-                    <li>
-                        <a href="#projects" class="footer__link">Projects</a>
-                    </li>
-                </ul>
-
-                <ul class="footer__social">
-                    <a href="https://www.linkedin.com/in/micaela-kloster-quintana/" target="_blank" class="footer__social-link">
-                        <i class="ri-linkedin-box-line"></i>
-                    </a>
-
-                    <a href="https://github.com/MicaelaKloster" target="_blank" class="footer__social-link">
-                        <i class="ri-github-line"></i>
-                    </a>
-
-                </ul>
-
-                <span class="footer__copy">
-                    &#169; Copyright Micaela Kloster Quintana. All rights reserved.
-                </span>
             </div>
-        </footer>
 
+            <div class="footer__bottom">
+                <p class="footer__copy">
+                    &copy; 2025 Micaela Kloster Quintana. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
 
-        <!--========== SCROLL UP ==========-->
-        <a href="#" class="scrollup" id="scroll-up">
-            <i class="ri-arrow-up-line"></i>
-        </a>        
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scroll-up" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
 
-        <!--=============== SCROLLREVEAL ===============-->
-        <script src="./assets/js/scrollreveal.min.js"></script>
-
-        <!--=============== SWIPER JS ===============-->
-        <script src="./assets/js/swiper-bundle.min.js"></script>
-        
-        <!--=============== EMAIL JS ===============-->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-        <!--=============== MAIN JS ===============-->
-        <script src="./assets/js/main.js"></script>
-    </body>
+    <!--=============== EMAILJS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!--=============== MAIN JS ===============-->
+    <script src="./assets/js/main.js"></script>
+</body>
 </html>
