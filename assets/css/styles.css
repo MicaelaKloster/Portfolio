@@ -1000,7 +1000,7 @@
   padding-bottom: 2px;
   border-bottom: 1px solid var(--ink-border);
   font-family: var(--font-mono);
-  font-size: var(--fs-sm);
+  font-size: clamp(0.75rem, 0.6rem + 0.9vw, 0.875rem);   /* keeps the address on one line at 360px+ */
   color: var(--ink);
   overflow-wrap: anywhere;
   transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
@@ -1103,8 +1103,26 @@
 
 /*=============== BREAKPOINTS: SECTIONS ===============*/
 @media (min-width: 768px) {
+  .hero__grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-6);
+  }
+
+  .hero__media {
+    justify-self: end;
+  }
+
+  .about__grid {
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: var(--space-6);
+  }
+
   .skills__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills__group:first-child {
+    grid-column: 1 / -1;
   }
 
   .work__featured {
@@ -1123,11 +1141,7 @@
 
 @media (min-width: 960px) {
   .hero__grid {
-    grid-template-columns: 1.15fr 0.85fr;
-  }
-
-  .hero__media {
-    justify-self: end;
+    gap: var(--space-7);
   }
 
   .about__grid {
@@ -1137,6 +1151,10 @@
 
   .skills__grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills__group:first-child {
+    grid-column: auto;
   }
 
   .contact__card {
