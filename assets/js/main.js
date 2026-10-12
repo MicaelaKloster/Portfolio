@@ -237,7 +237,38 @@ const initContactForm = () => {
     });
 };
 
+/*=============== ENTRANCE ANIMATIONS ===============*/
+const REVEAL_SELECTOR = [
+    '.section__header',
+    '.about__media',
+    '.about__text',
+    '.stats',
+    '.skills__group',
+    '.project',
+    '.work__more',
+    '.contact__card',
+].join(',');
+
+const initReveal = () => {
+    const items = document.querySelectorAll(REVEAL_SELECTOR);
+    if (reduceMotion.matches || !('IntersectionObserver' in window)) return;
+
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+        });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+
+    items.forEach((el) => {
+        el.classList.add('reveal');
+        revealObserver.observe(el);
+    });
+};
+
 initSocialLinks();
 renderProjects();
 initCounters();
 initContactForm();
+initReveal();
