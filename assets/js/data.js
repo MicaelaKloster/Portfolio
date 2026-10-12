@@ -4,7 +4,7 @@
 
 window.SITE = {
     /* Instagram username without "@". While it is empty the Instagram links stay hidden. */
-    instagramUser: '',
+    instagramUser: 'mica.dev',
 };
 
 /*==================================================
