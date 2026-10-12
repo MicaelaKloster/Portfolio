@@ -73,19 +73,117 @@
     <main class="main" id="main">
         <!--==================== HOME ====================-->
         <section class="hero section" id="home" aria-labelledby="hero-title">
-            <div class="container">
-                <span class="eyebrow">Full-Stack Developer</span>
-                <h1 class="hero__title" id="hero-title">Hi, I'm Mica</h1>
+            <div class="hero__grid container">
+                <div class="hero__content">
+                    <span class="status status--pill">
+                        <span class="status__dot" aria-hidden="true"></span>
+                        Available for work
+                    </span>
+
+                    <h1 class="hero__title" id="hero-title">Hi, I'm <span class="hero__name">Mica</span></h1>
+
+                    <p class="hero__subtitle">Full-Stack Developer crafting elegant digital experiences</p>
+
+                    <p class="hero__location eyebrow eyebrow--plain">
+                        <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                        Based in Santa Fe, Argentina
+                    </p>
+
+                    <div class="hero__actions">
+                        <a href="#contact" class="button button--light">
+                            Get in touch
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+                        </a>
+                        <a href="#work" class="button button--ghost">View work</a>
+                    </div>
+
+                    <ul class="social" aria-label="Social links">
+                        <li><a href="https://www.linkedin.com/in/micaela-kloster-quintana/" target="_blank" rel="noopener noreferrer" class="social__link" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+                        <li><a href="https://github.com/MicaelaKloster" target="_blank" rel="noopener noreferrer" class="social__link" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+                        <li data-social="instagram"><a href="#" target="_blank" rel="noopener noreferrer" class="social__link" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+                    </ul>
+                </div>
+
+                <figure class="hero__media">
+                    <div class="frame">
+                        <div class="frame__bar" aria-hidden="true">
+                            <span class="frame__dots"><i></i><i></i><i></i></span>
+                            <span class="frame__file mono">mica.webp</span>
+                        </div>
+                        <img
+                            class="frame__img"
+                            src="./assets/img/photos/mica-hero-800.webp"
+                            srcset="./assets/img/photos/mica-hero-480.webp 480w, ./assets/img/photos/mica-hero-800.webp 800w"
+                            sizes="(min-width: 960px) 440px, (min-width: 640px) 60vw, 90vw"
+                            width="800"
+                            height="1000"
+                            alt="Black and white portrait of Micaela Kloster Quintana, tinted violet"
+                            fetchpriority="high"
+                            decoding="async"
+                        >
+                    </div>
+                </figure>
+            </div>
+
+            <!-- Stack marquee -->
+            <div class="marquee" aria-label="Main stack">
+                <ul class="marquee__track">
+                    <li>Angular</li><li>React</li><li>Node</li><li>NestJS</li><li>Supabase</li><li>PostgreSQL</li><li>TypeScript</li><li>Python</li>
+                </ul>
+                <ul class="marquee__track" aria-hidden="true">
+                    <li>Angular</li><li>React</li><li>Node</li><li>NestJS</li><li>Supabase</li><li>PostgreSQL</li><li>TypeScript</li><li>Python</li>
+                </ul>
             </div>
         </section>
 
         <!--==================== ABOUT ====================-->
         <section class="about section" id="about" aria-labelledby="about-title">
-            <div class="container">
-                <header class="section__header">
-                    <span class="eyebrow">About me</span>
-                    <h2 class="section__title" id="about-title">Building digital products with passion and precision</h2>
-                </header>
+            <div class="about__grid container">
+                <figure class="about__media">
+                    <img
+                        class="about__img"
+                        src="./assets/img/photos/mica-about-720.webp"
+                        srcset="./assets/img/photos/mica-about-480.webp 480w, ./assets/img/photos/mica-about-720.webp 720w"
+                        sizes="(min-width: 960px) 400px, 90vw"
+                        width="720"
+                        height="900"
+                        alt="Micaela leaning against a wall in warm natural light"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </figure>
+
+                <div class="about__content">
+                    <header class="section__header">
+                        <span class="eyebrow">About me</span>
+                        <h2 class="section__title" id="about-title">Building digital products with passion and precision</h2>
+                    </header>
+
+                    <p class="about__text">
+                        I'm a Full-Stack Developer passionate about creating beautiful, functional web applications.
+                        With expertise in both front-end and back-end development, I bring ideas to life through
+                        clean code and thoughtful design.
+                    </p>
+                    <p class="about__text">
+                        My approach combines technical excellence with creative problem-solving, ensuring every
+                        project is not only functional but also delightful to use.
+                    </p>
+
+                    <dl class="stats">
+                        <div class="stats__item">
+                            <dt class="stats__label">Years Experience</dt>
+                            <dd class="stats__number" data-count="5" data-suffix="+">5+</dd>
+                        </div>
+                        <div class="stats__item">
+                            <dt class="stats__label">Projects Completed</dt>
+                            <dd class="stats__number" data-count="15" data-suffix="+">15+</dd>
+                        </div>
+                        <div class="stats__item">
+                            <dt class="stats__label">Technologies Mastered</dt>
+                            <dd class="stats__number" data-count="5" data-suffix="+">5+</dd>
+                        </div>
+                    </dl>
+                </div>
             </div>
         </section>
 
@@ -96,6 +194,41 @@
                     <span class="eyebrow">My expertise</span>
                     <h2 class="section__title" id="skills-title">Skills &amp; Technologies</h2>
                 </header>
+
+                <div class="skills__grid">
+                    <article class="skills__group">
+                        <h3 class="skills__title"><span class="mono">01</span> Frontend</h3>
+                        <ul class="pills">
+                            <li class="pill"><img src="./assets/img/html-1.svg" alt="" width="20" height="20" loading="lazy">HTML</li>
+                            <li class="pill"><img src="./assets/img/css-3.svg" alt="" width="20" height="20" loading="lazy">CSS</li>
+                            <li class="pill"><img src="./assets/img/bootstrap-5-1.svg" alt="" width="20" height="20" loading="lazy">Bootstrap</li>
+                            <li class="pill"><img src="./assets/img/logo-javascript.svg" alt="" width="20" height="20" loading="lazy">JavaScript</li>
+                            <li class="pill"><img src="./assets/img/react-2.svg" alt="" width="20" height="20" loading="lazy">React</li>
+                            <li class="pill"><img src="./assets/img/git-icon.svg" alt="" width="20" height="20" loading="lazy">Git</li>
+                            <li class="pill"><img src="./assets/img/angularjs.svg" alt="" width="20" height="20" loading="lazy">Angular</li>
+                        </ul>
+                    </article>
+
+                    <article class="skills__group">
+                        <h3 class="skills__title"><span class="mono">02</span> Web Design</h3>
+                        <ul class="pills">
+                            <li class="pill"><img src="./assets/img/figma-1.svg" alt="" width="20" height="20" loading="lazy">Figma</li>
+                            <li class="pill"><img src="./assets/img/invision.svg" alt="" width="20" height="20" loading="lazy">InVision</li>
+                            <li class="pill"><img src="./assets/img/webflow-icon.svg" alt="" width="20" height="20" loading="lazy">Webflow</li>
+                        </ul>
+                    </article>
+
+                    <article class="skills__group">
+                        <h3 class="skills__title"><span class="mono">03</span> Backend</h3>
+                        <ul class="pills">
+                            <li class="pill"><img src="./assets/img/nodejs-ar21.svg" alt="" width="20" height="20" loading="lazy" class="pill__wide">Node.js</li>
+                            <li class="pill"><img src="./assets/img/expressjs-ar21.svg" alt="" width="20" height="20" loading="lazy" class="pill__wide">Express.js</li>
+                            <li class="pill"><img src="./assets/img/mysql.svg" alt="" width="20" height="20" loading="lazy">MySQL</li>
+                            <li class="pill"><img src="./assets/img/postgresql.svg" alt="" width="20" height="20" loading="lazy">PostgreSQL</li>
+                            <li class="pill"><img src="./assets/img/python.svg" alt="" width="20" height="20" loading="lazy">Python</li>
+                        </ul>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -106,16 +239,69 @@
                     <span class="eyebrow">Portfolio</span>
                     <h2 class="section__title" id="work-title">Selected Work</h2>
                 </header>
+
+                <!-- Rendered from window.PROJECTS (assets/js/data.js) -->
+                <div class="work__featured" id="work-featured"></div>
+
+                <div class="work__more">
+                    <h3 class="work__more-title eyebrow">More projects</h3>
+                    <ol class="work__list" id="work-list"></ol>
+                </div>
+
+                <noscript>
+                    <p class="work__noscript">Enable JavaScript to see the project list, or browse my work on <a href="https://github.com/MicaelaKloster">GitHub</a>.</p>
+                </noscript>
             </div>
         </section>
 
         <!--==================== CONTACT ====================-->
         <section class="contact section" id="contact" aria-labelledby="contact-title">
             <div class="container">
-                <header class="section__header">
-                    <span class="eyebrow">Get in touch</span>
-                    <h2 class="section__title" id="contact-title">Let's work together</h2>
-                </header>
+                <div class="contact__card">
+                    <div class="contact__intro">
+                        <span class="eyebrow eyebrow--ink">Get in touch</span>
+                        <h2 class="section__title" id="contact-title">Let's work together</h2>
+                        <p class="contact__text">
+                            Have a project in mind? I'd love to hear about it.
+                            Send me a message and I'll get back to you as soon as possible.
+                        </p>
+
+                        <a href="mailto:micaela.klosterquintana@gmail.com" class="contact__email">
+                            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                            micaela.klosterquintana@gmail.com
+                        </a>
+
+                        <ul class="social social--ink" aria-label="Social links">
+                            <li><a href="https://www.linkedin.com/in/micaela-kloster-quintana/" target="_blank" rel="noopener noreferrer" class="social__link" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+                            <li><a href="https://github.com/MicaelaKloster" target="_blank" rel="noopener noreferrer" class="social__link" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+                            <li data-social="instagram"><a href="#" target="_blank" rel="noopener noreferrer" class="social__link" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+                        </ul>
+                    </div>
+
+                    <form class="form" id="contact-form" novalidate>
+                        <div class="form__field">
+                            <label for="contact-name" class="form__label">Name</label>
+                            <input type="text" id="contact-name" name="user_name" class="form__input" placeholder="Your name" autocomplete="name" required>
+                        </div>
+
+                        <div class="form__field">
+                            <label for="contact-email" class="form__label">Email</label>
+                            <input type="email" id="contact-email" name="user_email" class="form__input" placeholder="your.email@example.com" autocomplete="email" required>
+                        </div>
+
+                        <div class="form__field">
+                            <label for="contact-project" class="form__label">Message</label>
+                            <textarea id="contact-project" name="user_project" class="form__input form__textarea" placeholder="Tell me about your project..." rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="button button--dark form__submit">
+                            <span class="form__submit-label">Send Message</span>
+                            <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>
+                        </button>
+
+                        <p class="form__message" id="contact-message" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
@@ -152,7 +338,8 @@
     </footer>
 
     <!--=============== JS ===============-->
-    <script src="./assets/js/data.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js" defer></script>
+    <script src="./assets/js/data.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
 </body>
 </html>
